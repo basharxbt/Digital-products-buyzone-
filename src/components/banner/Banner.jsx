@@ -1,0 +1,64 @@
+import React from "react";
+import bannerimg from "../../assets/banner.png";
+import { FaRegDotCircle } from "react-icons/fa";
+import { CiPlay1 } from "react-icons/ci";
+
+const Banner = () => {
+  return (
+    <div>
+      <div className="flex justify-between items-center container mx-auto my-15">
+        <div className="space-y-6 flex flex-col justify-center">
+          <p className="bg-purple-100 rounded-4xl p-4 font-bold text-purple-800 flex gap-2 items-center w-max">
+            <FaRegDotCircle></FaRegDotCircle> New: AI-Powered Tools Available
+          </p>
+          <h1 className="text-7xl text-black font-bold">
+            Supercharge Your <br /> Digital Workflow
+          </h1>
+
+          <p className="text-neutral-500">
+            Access premium AI tools, design assets, templates, and productivity{" "}
+            <br />
+            software—all in one place. Start creating faster today. <br />
+            Explore Products
+          </p>
+          <div
+            className="flex gap-4
+        "
+          >
+            <button className="btn btn-primary rounded-4xl">
+              Explore Products
+            </button>
+            <button className="btn btn-primary btn-outline rounded-4xl">
+              <CiPlay1></CiPlay1>
+              Watch Demo
+            </button>
+          </div>
+        </div>
+        <div>
+          <img src={bannerimg} alt="Banner" />
+        </div>
+      </div>
+
+      {/* Ratiing Section */}
+
+      <div className="bg-purple-700 py-20 my-20">
+        <div className="flex  justify-around items-center container mx-auto">
+          <div className="text-center space-y-2">
+            <h1 className="text-7xl text-white font-bold">50K+</h1>
+            <p className="text-purple-200 text-2xl">Active Users</p>
+          </div>
+          <div className="text-center space-y-2">
+            <h1 className="text-7xl text-white font-bold">200+</h1>
+            <p className="text-purple-200 text-2xl">Premium Tools</p>
+          </div>
+          <div className="text-center space-y-2">
+            <h1 className="text-7xl text-white font-bold">4.9</h1>
+            <p className="text-purple-200 text-2xl">Rating</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Banner;

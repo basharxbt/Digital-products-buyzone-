@@ -1,11 +1,7 @@
 import React, { useState } from "react";
 import CartSingleProduct from "./CartSingleProduct";
 
-const CartProducts = ({ setAddProducts, addProducts }) => {
-  const productTotalPrice = addProducts.reduce(
-    (total, product) => total + product.price,
-    0,
-  );
+const CartProducts = ({ setAddProducts, addProducts, productTotalPrice }) => {
   return (
     <div
       className="space-y-5 border-1 border-neutral-200 p-10 my-10 rounded-3xl
@@ -24,7 +20,7 @@ const CartProducts = ({ setAddProducts, addProducts }) => {
       })}
       <div className="space-y-4">
         <p className="flex justify-between text-2xl font-semibold">
-          Total: <span>{productTotalPrice}</span>
+          Total: <span>{productTotalPrice}$</span>
         </p>
 
         <button

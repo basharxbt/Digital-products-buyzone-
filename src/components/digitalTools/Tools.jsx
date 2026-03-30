@@ -3,7 +3,7 @@ import Products from "./products/Products";
 import CartProducts from "./cartProducts/CartProducts";
 import { IoCartOutline } from "react-icons/io5";
 
-const Tools = ({ addProducts, setAddProducts }) => {
+const Tools = ({ addProducts, setAddProducts, productTotalPrice }) => {
   const productsPromise = fetch("../../../public/data.json").then((res) =>
     res.json(),
   );
@@ -39,7 +39,11 @@ const Tools = ({ addProducts, setAddProducts }) => {
         </div>
       </div>
       <Suspense
-        fallback={<span className="loading loading-bars loading-xl"></span>}
+        fallback={
+          <div className=" flex justify-center items-center my-10">
+            <span className="loading loading-bars loading-xl bg-purple-700 "></span>
+          </div>
+        }
       >
         {productSection === "products" ? (
           <Products
@@ -59,6 +63,7 @@ const Tools = ({ addProducts, setAddProducts }) => {
           </div>
         ) : (
           <CartProducts
+            productTotalPrice={productTotalPrice}
             addProducts={addProducts}
             setAddProducts={setAddProducts}
           ></CartProducts>

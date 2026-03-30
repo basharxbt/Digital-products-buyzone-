@@ -8,7 +8,7 @@ const Product = ({ product, addProducts, setAddProducts }) => {
   };
 
   return (
-    <div className="card w-96 bg-base-100 shadow-sm">
+    <div className="card w-96 bg-base-100 shadow-sm  hover:-translate-y-2 transition-all duration-300 mt-4">
       <div className="card-body">
         <div className="flex justify-between">
           <img className="w-8 h-8" src={product.icon} alt="icon" />
@@ -21,8 +21,8 @@ const Product = ({ product, addProducts, setAddProducts }) => {
         <div className="space-y-4">
           <h2 className="text-3xl font-bold"> {product.name}</h2>
           <p>{product.description}</p>
-          <span className="text-xl">
-            {product.price}/{product.period}
+          <span className="text-xl font-semibold text-neutral-600">
+            ${product.price}/{product.period}
           </span>
         </div>
         <ul className="mt-6 flex flex-col gap-2 text-xs">

@@ -23,7 +23,7 @@ const CartSingleProduct = ({ product, setAddProducts, addProducts }) => {
                 className="text-neutral-500 font-medium
               "
               >
-                {product.price}
+                ${product.price}
               </p>
             </div>
           </div>

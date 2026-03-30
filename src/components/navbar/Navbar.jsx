@@ -1,6 +1,6 @@
 import React from "react";
 
-const Navbar = ({ addProducts }) => {
+const Navbar = ({ addProducts, productTotalPrice }) => {
   return (
     <div className=" shadow-sm sticky">
       <div className="navbar bg-base-100 container mx-auto  flex justify-between ">
@@ -57,7 +57,12 @@ const Navbar = ({ addProducts }) => {
                   <span className="text-lg font-bold">
                     {addProducts.length} Items
                   </span>
-                  <span className="text-info">Subtotal: $999</span>
+                  <span className="text-neutral-600 font-bold">
+                    Subtotal:{" "}
+                    <span className="text-red-600">
+                      {productTotalPrice.toFixed(2)}$
+                    </span>
+                  </span>
                   <div className="card-actions">
                     <button className="btn btn-primary btn-block">
                       View cart

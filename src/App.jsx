@@ -5,6 +5,8 @@ import Tools from "./components/digitalTools/Tools";
 import Navbar from "./components/navbar/Navbar";
 import Steps from "./components/steps/Steps";
 import SimplePricingCard from "./components/simplePricingCard/SimplePricingCard";
+import Explore from "./components/explore/Explore";
+import Footer from "./components/footer/Footer";
 
 function App() {
   const [addProducts, setAddProducts] = useState([]);
@@ -27,6 +29,8 @@ function App() {
         ></Tools>
         <Steps></Steps>
         <SimplePricingCard></SimplePricingCard>
+        <Explore></Explore>
+        <Footer></Footer>
       </div>
     </>
   );

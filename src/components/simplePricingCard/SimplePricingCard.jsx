@@ -11,7 +11,7 @@ const SimplePricingCard = () => {
       </div>
       <div className="flex gap-5 flex-wrap justify-around items-center">
         {/* 1 */}
-        <div className="card w-96 bg-base-100 shadow-2xl mt-10">
+        <div className="card w-96 bg-base-100 shadow-2xl mt-10 hover:-translate-y-2 transition-all duration-300">
           <div className="card-body">
             <div className="flex flex-col gap-1">
               <h2 className="text-2xl font-bold">Starter</h2>
@@ -111,7 +111,7 @@ const SimplePricingCard = () => {
           </div>
         </div>
         {/* 2 */}
-        <div className="card w-96 bg-gradient-to-r from-[#4E39F6] to-[#9514FA] shadow-2xl mt-10">
+        <div className="card w-96 bg-gradient-to-r from-[#4E39F6] to-[#9514FA] shadow-2xl mt-10 hover:-translate-y-2 transition-all duration-300">
           <div className="card-body">
             <div className="flex flex-col gap-1">
               <h2 className="text-2xl text-white font-bold">Pro</h2>
@@ -237,16 +237,18 @@ const SimplePricingCard = () => {
             </div>
           </div>
         </div>
-        <div className="card w-96 bg-base-100 shadow-2xl mt-10">
+
+        {/* 3 */}
+        <div className="card w-96 bg-base-100 shadow-2xl mt-10 hover:-translate-y-2 transition-all duration-300">
           <div className="card-body">
             <div className="flex flex-col gap-1">
-              <h2 className="text-2xl font-bold">Starter</h2>
+              <h2 className="text-2xl font-bold">Enterprise</h2>
 
               <span className="text-sm text-neutral-600">
-                Perfect for getting started
+                For teams and businesses
               </span>
               <p>
-                <span className="text-2xl pt-4 font-semibold">$0</span>
+                <span className="text-2xl pt-4 font-semibold">$99</span>
                 <span className="text-neutral-500">/Month</span>
               </p>
             </div>

@@ -5,7 +5,7 @@ const Products = ({ productsPromise, setAddProducts, addProducts }) => {
   const products = use(productsPromise);
 
   return (
-    <div className="grid grid-cols-3 my-10 gap-10">
+    <div className="flex flex-wrap justify-around my-10 gap-10">
       {products.map((product) => {
         return (
           <Product

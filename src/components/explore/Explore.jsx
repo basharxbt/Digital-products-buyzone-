@@ -3,7 +3,7 @@ import React from "react";
 const Explore = () => {
   return (
     <div className="bg-gradient-to-r from-[#4E39F6] to-[#9514FA] text-white ">
-      <div className=" p-20 flex flex-col justify-center items-center ">
+      <div className=" py-20 px-5 flex flex-col justify-center items-center ">
         <div className="space-y-4 text-center">
           <h1 className="text-4xl font-semibold">
             Ready to Transform Your Workflow?

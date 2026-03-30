@@ -42,7 +42,7 @@ const Banner = () => {
       {/* Ratiing Section */}
 
       <div className="bg-gradient-to-r from-[#4E39F6] to-[#9514FA] text-white py-20 my-20">
-        <div className="flex  justify-around items-center container mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 container mx-auto">
           <div className="text-center space-y-2">
             <h1 className="text-7xl text-white font-bold">50K+</h1>
             <p className="text-purple-200 text-2xl">Active Users</p>

@@ -2,9 +2,11 @@ import React from "react";
 
 const SimplePricingCard = () => {
   return (
-    <div className="container mx-auto my-20">
+    <div className="container mx-auto my-20 p-5 ">
       <div className="text-center">
-        <h3 className="text-4xl font-semibold">Simple, Transparent Pricing</h3>
+        <h3 className="text-4xl font-semibold mb-5">
+          Simple, Transparent Pricing
+        </h3>
         <p>
           Choose the plan that fits your needs. Upgrade or downgrade anytime.
         </p>

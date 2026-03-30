@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Bounce, toast } from "react-toastify";
 
 const Product = ({ product, addProducts, setAddProducts }) => {
+  console.log(product.tag);
   const [buyProduct, setBuyproduct] = useState(false);
   const carProductsHandle = () => {
     if (addProducts.find((p) => p.id === product.id)) {
@@ -29,7 +30,7 @@ const Product = ({ product, addProducts, setAddProducts }) => {
         <div className="flex justify-between">
           <img className="w-8 h-8" src={product.icon} alt="icon" />
           <span
-            className={`badge badge-xs ${product.tag === "popular" ? "bg-purple-100" : product.tag === "new" ? "badge-info" : "bg-purple-100"} p-3 rounded-full`}
+            className={`badge badge-xs ${product.tag === "Popular" ? "bg-purple-100 text-purple-800" : product.tag === "New" ? "bg-green-100 text-green-700" : "bg-yellow-100 text-yellow-800"} p-3 rounded-full`}
           >
             {product.tag}
           </span>

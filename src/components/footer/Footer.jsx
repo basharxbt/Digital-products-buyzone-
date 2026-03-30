@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <div className="bg-black text-white">
       <div className="container mx-auto p-20">
-        <div className="flex justify-between ">
+        <div className="flex flex-wrap gap-15 items-center justify-between ">
           <div className="space-y-4">
             <h3 className="text-4xl font-semibold">DigiTools</h3>
             <p>
@@ -66,6 +66,18 @@ const Footer = () => {
               <a href="">
                 <FaTwitter className="text-3xl"></FaTwitter>
               </a>
+            </ul>
+          </div>
+        </div>
+        <div className="mt-10 space-y-7">
+          <hr className="text-white/30" />
+          <div className="flex flex-wrap gap-5 items-center justify-between text-white/80">
+            <p>© 2026 Digitools. All rights reserved.</p>
+            <ul className="flex gap-7 ">
+              <li>Privacy Policy </li>
+
+              <li>Terms of Service</li>
+              <li>Terms of Service</li>
             </ul>
           </div>
         </div>

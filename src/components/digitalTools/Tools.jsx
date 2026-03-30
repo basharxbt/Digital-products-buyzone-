@@ -1,7 +1,19 @@
-import React from "react";
+import React, { Suspense, useState } from "react";
 import Products from "./products/Products";
+import CartProducts from "./cartProducts/CartProducts";
 
 const Tools = () => {
+  const productsPromise = fetch("../../../public/data.json").then((res) =>
+    res.json(),
+  );
+  const [productSection, setProducSection] = useState("products");
+
+  const [addProducts, setAddProducts] = useState([]);
+
+  // const handleProductSection = () => {
+  //   setProducSection(true);
+  // };
+
   return (
     <div className="container mx-auto my-10">
       <div className="text-center flex flex-col items-center  space-y-6">
@@ -13,14 +25,36 @@ const Tools = () => {
         </p>
         <div>
           {" "}
-          <button className="btn btn-primary rounded-3xl rounded-r-none">
+          <button
+            onClick={() => setProducSection("products")}
+            className={`btn ${productSection === "products" ? "btn-primary" : ""} rounded-3xl rounded-r-none`}
+          >
             Products
           </button>
-          <button className="btn rounded-3xl rounded-l-none">Cart ()</button>
+          <button
+            onClick={() => setProducSection("cart")}
+            className={`btn ${productSection === "cart" ? "btn-primary" : ""} rounded-3xl  rounded-l-none`}
+          >
+            Cart ()
+          </button>
         </div>
       </div>
-
-      <Products></Products>
+      <Suspense
+        fallback={<span className="loading loading-bars loading-xl"></span>}
+      >
+        {productSection === "products" ? (
+          <Products
+            productsPromise={productsPromise}
+            addProducts={addProducts}
+            setAddProducts={setAddProducts}
+          ></Products>
+        ) : (
+          <CartProducts
+            addProducts={addProducts}
+            setAddProducts={setAddProducts}
+          ></CartProducts>
+        )}
+      </Suspense>
     </div>
   );
 };

@@ -25,7 +25,7 @@ const Banner = () => {
             className="flex gap-4
         "
           >
-            <button className="btn btn-primary rounded-4xl">
+            <button className="btn bg-gradient-to-r from-[#4E39F6] to-[#9514FA] text-white  rounded-4xl">
               Explore Products
             </button>
             <button className="btn btn-primary btn-outline rounded-4xl">
@@ -41,7 +41,7 @@ const Banner = () => {
 
       {/* Ratiing Section */}
 
-      <div className="bg-purple-700 py-20 my-20">
+      <div className="bg-gradient-to-r from-[#4E39F6] to-[#9514FA] text-white py-20 my-20">
         <div className="flex  justify-around items-center container mx-auto">
           <div className="text-center space-y-2">
             <h1 className="text-7xl text-white font-bold">50K+</h1>

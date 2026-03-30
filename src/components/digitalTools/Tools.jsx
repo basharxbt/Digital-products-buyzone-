@@ -26,13 +26,13 @@ const Tools = ({ addProducts, setAddProducts, productTotalPrice }) => {
           {" "}
           <button
             onClick={() => setProducSection("products")}
-            className={`btn ${productSection === "products" ? "btn-primary" : ""} rounded-3xl rounded-r-none`}
+            className={`btn ${productSection === "products" ? "bg-gradient-to-r from-[#4E39F6] to-[#9514FA] text-white " : ""} rounded-3xl rounded-r-none`}
           >
             Products
           </button>
           <button
             onClick={() => setProducSection("cart")}
-            className={`btn ${productSection === "cart" ? "btn-primary" : ""} rounded-3xl  rounded-l-none`}
+            className={`btn ${productSection === "cart" ? "bg-gradient-to-r from-[#4E39F6] to-[#9514FA] text-white " : ""} rounded-3xl  rounded-l-none`}
           >
             Cart ({addProducts.length})
           </button>

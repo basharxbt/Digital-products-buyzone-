@@ -6,7 +6,7 @@ import { LuRocket } from "react-icons/lu";
 
 const Steps = () => {
   return (
-    <div className="container mx-auto text-center my-30 bg-base-200 rounded-3xl p-20">
+    <div className="container mx-auto text-center my-30 bg-base-200 rounded-2xl p-20">
       <h2 className="text-4xl font-semibold ">Get Started in 3 Steps</h2>
       <p>Start using premium digital tools in minutes, not hours.</p>
       <div className="flex flex-wrap justify-around items-center my-10 gap-10">

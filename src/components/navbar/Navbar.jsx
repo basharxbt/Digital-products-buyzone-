@@ -79,7 +79,9 @@ const Navbar = ({ addProducts, productTotalPrice }) => {
 
           {/* Get Started */}
 
-          <button className="btn btn-primary rounded-full">Get Started</button>
+          <button className="btn bg-gradient-to-r from-[#4E39F6] to-[#9514FA] text-white rounded-full ">
+            Get Started
+          </button>
         </div>
       </div>
     </div>

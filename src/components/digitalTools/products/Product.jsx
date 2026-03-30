@@ -81,7 +81,7 @@ const Product = ({ product, addProducts, setAddProducts }) => {
         <div className="mt-6">
           <button
             onClick={carProductsHandle}
-            className="btn btn-primary btn-block rounded-3xl"
+            className="btn bg-gradient-to-r from-[#4E39F6] to-[#9514FA] text-white  btn-block rounded-3xl"
           >
             Buy Now
           </button>

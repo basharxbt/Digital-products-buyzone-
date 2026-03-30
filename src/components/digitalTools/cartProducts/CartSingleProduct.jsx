@@ -1,5 +1,6 @@
 import React from "react";
 import { FaDeleteLeft } from "react-icons/fa6";
+import { Bounce, toast } from "react-toastify";
 
 const CartSingleProduct = ({ product, setAddProducts, addProducts }) => {
   const removeProductHandle = () => {
@@ -7,6 +8,17 @@ const CartSingleProduct = ({ product, setAddProducts, addProducts }) => {
       (removeProduct) => removeProduct.id !== product.id,
     );
     setAddProducts(remainProducts);
+    toast.error("Item Remove from Cart Successfully", {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      transition: Bounce,
+    });
   };
 
   return (

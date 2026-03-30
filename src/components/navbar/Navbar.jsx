@@ -2,14 +2,14 @@ import React from "react";
 
 const Navbar = ({ addProducts, productTotalPrice }) => {
   return (
-    <div className=" shadow-sm sticky">
-      <div className="navbar bg-base-100 container mx-auto  flex justify-between ">
+    <div className=" shadow-sm ">
+      <div className="navbar p-5 bg-base-100 container mx-auto  flex justify-between ">
         <div className="">
           <a className=" text-3xl font-bold text-purple-700">DigiTools</a>
         </div>
 
         <div>
-          <ul className="flex gap-5">
+          <ul className="lg:flex gap-5 hidden">
             <a href="">Products</a>
             <a href="">Features</a>
             <a href="">Pricing</a>

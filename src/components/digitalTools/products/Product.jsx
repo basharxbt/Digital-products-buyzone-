@@ -1,10 +1,26 @@
 import React, { useState } from "react";
+import { Bounce, toast } from "react-toastify";
 
 const Product = ({ product, addProducts, setAddProducts }) => {
+  const [buyProduct, setBuyproduct] = useState(false);
   const carProductsHandle = () => {
+    if (addProducts.find((p) => p.id === product.id)) {
+      return;
+    }
     const newProducts = [...addProducts, product];
+    setBuyproduct(true);
     setAddProducts(newProducts);
-    console.log(newProducts);
+    toast.success("Item Added to Cart Successfully", {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      transition: Bounce,
+    });
   };
 
   return (
@@ -81,9 +97,10 @@ const Product = ({ product, addProducts, setAddProducts }) => {
         <div className="mt-6">
           <button
             onClick={carProductsHandle}
-            className="btn bg-gradient-to-r from-[#4E39F6] to-[#9514FA] text-white  btn-block rounded-3xl"
+            disabled={buyProduct}
+            className={`btn  ${buyProduct ? "btn-success" : "bg-gradient-to-r from-[#4E39F6] to-[#9514FA] text-white"}  btn-block rounded-3xl`}
           >
-            Buy Now
+            {buyProduct ? "Added To Cart" : "Buy Now"}
           </button>
         </div>
       </div>

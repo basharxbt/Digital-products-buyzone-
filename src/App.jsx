@@ -7,6 +7,7 @@ import Steps from "./components/steps/Steps";
 import SimplePricingCard from "./components/simplePricingCard/SimplePricingCard";
 import Explore from "./components/explore/Explore";
 import Footer from "./components/footer/Footer";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   const [addProducts, setAddProducts] = useState([]);
@@ -31,6 +32,7 @@ function App() {
         <SimplePricingCard></SimplePricingCard>
         <Explore></Explore>
         <Footer></Footer>
+        <ToastContainer />
       </div>
     </>
   );

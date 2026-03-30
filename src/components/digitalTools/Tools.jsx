@@ -1,14 +1,13 @@
 import React, { Suspense, useState } from "react";
 import Products from "./products/Products";
 import CartProducts from "./cartProducts/CartProducts";
+import { IoCartOutline } from "react-icons/io5";
 
-const Tools = () => {
+const Tools = ({ addProducts, setAddProducts }) => {
   const productsPromise = fetch("../../../public/data.json").then((res) =>
     res.json(),
   );
   const [productSection, setProducSection] = useState("products");
-
-  const [addProducts, setAddProducts] = useState([]);
 
   // const handleProductSection = () => {
   //   setProducSection(true);
@@ -48,6 +47,16 @@ const Tools = () => {
             addProducts={addProducts}
             setAddProducts={setAddProducts}
           ></Products>
+        ) : addProducts.length === 0 ? (
+          <div
+            className="flex flex-col gap-3 justify-center items-center my-10 shadow-sm
+           border-1 border-neutral-200 p-50"
+          >
+            <IoCartOutline className="text-7xl text-neutral-400"></IoCartOutline>
+            <p className="text-3xl font-semibold text-neutral-400">
+              Your Cart is Empty
+            </p>
+          </div>
         ) : (
           <CartProducts
             addProducts={addProducts}

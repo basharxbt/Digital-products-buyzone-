@@ -1,15 +1,20 @@
+import { useState } from "react";
 import "./App.css";
 import Banner from "./components/banner/Banner";
 import Tools from "./components/digitalTools/Tools";
 import Navbar from "./components/navbar/Navbar";
 
 function App() {
+  const [addProducts, setAddProducts] = useState([]);
   return (
     <>
       <div>
-        <Navbar></Navbar>
+        <Navbar addProducts={addProducts}></Navbar>
         <Banner></Banner>
-        <Tools></Tools>
+        <Tools
+          addProducts={addProducts}
+          setAddProducts={setAddProducts}
+        ></Tools>
       </div>
     </>
   );

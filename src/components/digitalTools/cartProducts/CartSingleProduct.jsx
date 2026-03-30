@@ -6,7 +6,6 @@ const CartSingleProduct = ({ product }) => {
   return (
     <div>
       <div className="">
-        <h3>Your Cart</h3>
         <div className="flex justify-between p-6 bg-base-200 rounded-2xl">
           <div className="flex items-center gap-4 ">
             <img className="w-8 h-8 rounded-lg" src={product.icon} alt="" />

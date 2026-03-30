@@ -35,7 +35,7 @@ const Tools = () => {
             onClick={() => setProducSection("cart")}
             className={`btn ${productSection === "cart" ? "btn-primary" : ""} rounded-3xl  rounded-l-none`}
           >
-            Cart ()
+            Cart ({addProducts.length})
           </button>
         </div>
       </div>

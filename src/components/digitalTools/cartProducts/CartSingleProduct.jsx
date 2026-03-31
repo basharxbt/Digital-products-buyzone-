@@ -24,7 +24,7 @@ const CartSingleProduct = ({ product, setAddProducts, addProducts }) => {
   return (
     <div>
       <div className=" flex flex-col justify-center ">
-        <div className="flex justify-between p-6 bg-base-200 rounded-2xl">
+        <div className="flex flex-col md:flex-row justify-center md:justify-between gap-4 p-6 bg-base-200 rounded-2xl">
           <div className="flex items-center gap-4 ">
             <img className="w-8 h-8 rounded-lg" src={product.icon} alt="" />
             <div>
@@ -41,9 +41,9 @@ const CartSingleProduct = ({ product, setAddProducts, addProducts }) => {
           </div>
           <button
             onClick={removeProductHandle}
-            className="flex gap-2 items-center btn text-red-500 font-medium"
+            className="flex gap-2 items-center btn btn-outline text-red-500 font-medium"
           >
-            Remove <FaDeleteLeft></FaDeleteLeft>/
+            Remove <FaDeleteLeft></FaDeleteLeft>
           </button>
         </div>
       </div>

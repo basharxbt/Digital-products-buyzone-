@@ -2,7 +2,7 @@ import React from "react";
 
 const Navbar = ({ addProducts, productTotalPrice }) => {
   return (
-    <div className=" shadow-sm ">
+    <div className=" shadow-sm sticky top-0 bg-white z-10">
       <div className="navbar p-5 bg-base-100 container mx-auto  flex justify-between ">
         <div className="">
           <a className=" text-3xl font-bold text-purple-700">DigiTools</a>

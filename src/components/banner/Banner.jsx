@@ -45,15 +45,19 @@ const Banner = () => {
       {/* Ratiing Section */}
 
       <div className="bg-gradient-to-r from-[#4E39F6] to-[#9514FA] text-white py-20 my-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 container mx-auto">
-          <div className="text-center space-y-2">
+        <div className="flex flex-col md:flex-row justify-around gap-10 container mx-auto  border-r-white">
+          <div className="text-center space-y-2 ">
             <h1 className="text-7xl text-white font-bold">50K+</h1>
             <p className="text-purple-200 text-2xl">Active Users</p>
           </div>
+          <div className="divider border-r-2 divider-horizontal "></div>
+
           <div className="text-center space-y-2">
             <h1 className="text-7xl text-white font-bold">200+</h1>
             <p className="text-purple-200 text-2xl">Premium Tools</p>
           </div>
+          <div className="divider border-r-2 divider-horizontal "></div>
+
           <div className="text-center space-y-2">
             <h1 className="text-7xl text-white font-bold">4.9</h1>
             <p className="text-purple-200 text-2xl">Rating</p>

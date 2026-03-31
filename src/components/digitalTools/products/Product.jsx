@@ -5,6 +5,17 @@ const Product = ({ product, addProducts, setAddProducts }) => {
   const [buyProduct, setBuyproduct] = useState(false);
   const carProductsHandle = () => {
     if (addProducts.find((p) => p.id === product.id)) {
+      toast.error("Product Already Added on the Cart", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+      });
       return;
     }
     const newProducts = [...addProducts, product];
@@ -97,7 +108,7 @@ const Product = ({ product, addProducts, setAddProducts }) => {
         <div className="mt-6">
           <button
             onClick={carProductsHandle}
-            disabled={buyProduct}
+            // disabled={buyProduct}
             className={`btn  ${buyProduct ? "btn-success" : "bg-gradient-to-r from-[#4E39F6] to-[#9514FA] text-white"}  btn-block rounded-3xl`}
           >
             {buyProduct ? "Added To Cart" : "Buy Now"}

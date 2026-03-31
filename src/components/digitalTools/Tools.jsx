@@ -52,7 +52,7 @@ const Tools = ({ addProducts, setAddProducts, productTotalPrice }) => {
         ) : addProducts.length === 0 ? (
           <div
             className="flex flex-col gap-3 justify-center items-center my-10 shadow-sm
-           border-1 border-neutral-200 p-50"
+           border-1 border-neutral-200 py-50"
           >
             <IoCartOutline className="text-7xl text-neutral-400"></IoCartOutline>
             <p className="text-3xl font-semibold text-neutral-400">

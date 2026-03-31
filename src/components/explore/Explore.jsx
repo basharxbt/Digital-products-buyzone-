@@ -19,7 +19,7 @@ const Explore = () => {
               Explore Products
             </button>
             <button className="btn btn-outline rounded-3xl">
-              Explore Products
+              View Pricing
             </button>
           </div>
           <p className="text-neutral-400">

@@ -11,19 +11,22 @@ const Banner = () => {
           <img src={bannerimg} alt="Banner" />
         </div>
         <div className="space-y-6 flex items-center lg:items-start  flex-col justify-center">
-          <p className="bg-purple-100 rounded-4xl p-4 font-bold text-purple-800 flex gap-2 items-center w-max">
+          <p className="bg-purple-100 rounded-4xl p-4 font-bold text-purple-800 flex gap-2 items-center w-max ">
             <FaRegDotCircle></FaRegDotCircle> New: AI-Powered Tools Available
           </p>
-          <h1 className="text-7xl text-black font-bold text-center lg:text-left ">
-            Supercharge Your Digital Workflow
-          </h1>
-
-          <p className="text-neutral-500 text-center lg:text-left ">
-            Access premium AI tools, design assets, templates, and productivity{" "}
-            <br />
-            software—all in one place. Start creating faster today. <br />
-            Explore Products
-          </p>
+          <div className="">
+            {" "}
+            <h1 className="text-6xl text-black font-bold text-center lg:text-left ">
+              Supercharge Your Digital Workflow
+            </h1>
+            <p className="text-neutral-500 text-center lg:text-left ">
+              Access premium AI tools, design assets, templates, and
+              productivity
+              <br />
+              software—all in one place. Start creating faster today. <br />
+              Explore Products
+            </p>
+          </div>
           <div
             className="flex gap-4
         "

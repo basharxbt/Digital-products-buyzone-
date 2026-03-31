@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Bounce, toast } from "react-toastify";
 
 const Product = ({ product, addProducts, setAddProducts }) => {
-  console.log(product.tag);
   const [buyProduct, setBuyproduct] = useState(false);
   const carProductsHandle = () => {
     if (addProducts.find((p) => p.id === product.id)) {

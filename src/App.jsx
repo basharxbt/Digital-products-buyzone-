@@ -17,7 +17,7 @@ function App() {
   );
   return (
     <>
-      <div>
+      <div data-theme="light">
         <Navbar
           productTotalPrice={productTotalPrice}
           addProducts={addProducts}

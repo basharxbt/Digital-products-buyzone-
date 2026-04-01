@@ -115,6 +115,9 @@ const SimplePricingCard = () => {
         {/* 2 */}
         <div className="card w-96 bg-gradient-to-r from-[#4E39F6] to-[#9514FA] shadow-2xl mt-10 hover:-translate-y-2 transition-all duration-300">
           <div className="card-body">
+            <div className=" absolute -top-4 left-35 p-2 rounded-full bg-yellow-100 text-yellow-900">
+              <p>Most Popular</p>
+            </div>
             <div className="flex flex-col gap-1">
               <h2 className="text-2xl text-white font-bold">Pro</h2>
 

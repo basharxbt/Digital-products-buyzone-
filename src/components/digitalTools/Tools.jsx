@@ -3,8 +3,9 @@ import Products from "./products/Products";
 import CartProducts from "./cartProducts/CartProducts";
 import { IoCartOutline } from "react-icons/io5";
 
+const productsPromise = fetch("/data.json").then((res) => res.json());
+
 const Tools = ({ addProducts, setAddProducts, productTotalPrice }) => {
-  const productsPromise = fetch("/data.json").then((res) => res.json());
   const [productSection, setProducSection] = useState("products");
 
   // const handleProductSection = () => {
